@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class = "row">
+            <div class ="form box">
+                <p>Loan Amount (rs)</p>
+                <input type="number" placeholder="Enter the loan Amount" id="amount" min ="10000" max="10000000" maxlength="8" required class="input">
+                <p>Interest Rate (%)</p>
+                <input type="number" placeholder="Enter the interest Rate" id="interest" min="1" max="99" maxlength="4" required step="0.01" class="input">
+                <p>Loan Tenure (Yr/mo)</p>
+                <input type="number" placeholder="Enter the loan Tenure" id="loantenure" min="1" max="360" maxlength="3" required class="input">
+                <div class="tenure">
+                    <input type="radio" name="btn" id="year" checked>
+                    <label for="year">Year</label>
+                    <input type="radio" name="btn" id="month">
+                    <label for="month">Month</label>
+                </div>
+                <button class="calculate" id="calculate">Calculate</button>
+            </div>
+            <div class="box output">
+                <p>EMI (rs)</p>
+                <div id="emi"></div>
+                <p>Total Interest (rs)</p>
+                <div id="totalinterest"></div>
+                <p>Total Amount (rs)</p>
+                <div id="totalamount"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="..\EMI_calculator\script.js"></script>
+</body>
+</html>
